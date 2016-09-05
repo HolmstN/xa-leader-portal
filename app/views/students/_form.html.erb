@@ -1,0 +1,48 @@
+<%= form_for :student, url: students_path do |f| %>
+
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@student.errors.count, "error") %> prohibited
+        this student from being saved:
+      </h2>
+      <ul>
+        <% @student.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.radio_button :group_type, "men" %>
+    <%= f.label :group_type_men, "Men's Group" %>
+    <%= f.radio_button :group_type, "women" %>
+    <%= f.label :group_type_women, "Women's Group" %>
+  </p>
+  
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= f.label :email_confirmation %>
+    <%= f.email_field :email_confirmation %>
+  </p>
+  
+  <p>
+    <%= f.label :phone %>
+    <%= f.telephone_field :phone %>
+  </p>
+  
+   <p>
+    Address Will Go Here
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

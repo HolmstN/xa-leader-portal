@@ -1,9 +1,29 @@
 <h1>Dashboard</h1>
 
-<h2>Info</h2>
+  <h2>Info</h2>
+  
+  <h3>Staff News Feed</h3>
+    <ul>
+      <li>Most Recent News | 0</li>
+      <li>Most Recent News |-1</li>
+      <li>Most Recent News |-2</li>
+    </ul>
+  
+  <h2>Calendar</h2>
 
-<h2>Calendar</h2>
+    <h3>Upcoming Events:</h3>
+      <ul>
+        <li>Thing One</li>
+        <li>Thing Two</li>
+        <li>Thing Three</li>
+      </ul>
 
-<h2>Next Steps</h2>
+    <p>Link to Calendar</p>
 
-<a href='students/new'>New Student Entry</a>
+  <h2>Next Steps</h2>
+
+    <ul>
+      <li><%= link_to 'New Student Connection', new_student_path %></li>
+      <li><%= link_to 'View All Students', students_path %></li>
+      <li><%= link_to 'View My Student Connections (Not Yet Implemented)', root_path %></li>
+    </ul>

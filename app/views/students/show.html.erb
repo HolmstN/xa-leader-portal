@@ -4,6 +4,11 @@
 </p>
 
 <p>
+  <strong>Group Type:</strong>
+  <%= @student.group_type.capitalize %>
+</p>
+
+<p>
   <strong>Email:</strong>
   <%= @student.email %>
 </p>
@@ -12,3 +17,6 @@
   <strong>Phone:</strong>
   <%= @student.phone %>
 </p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> | 
+<%= link_to 'Back to Students', students_path %>
